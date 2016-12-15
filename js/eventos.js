@@ -30,7 +30,7 @@ var inicioJuego = function()
 		                 "&id="+Math.random();
 		
 		//Validamos que no esten vacíos
-		if(usuario!="" && clave!="")
+		if(usuario1!="" && clave1!="" && usuario2!="" && clave2!="" )
 		{
 			//Hacemos la petición remota
 			$.ajax({
@@ -43,7 +43,7 @@ var inicioJuego = function()
 					if(response.respuesta == true)
 					{    
 						$("#inicio").hide("slow");
-						$("#juego").show("slow");
+						$("#picbox").show("slow"); 
 					}
 					else
 					{
