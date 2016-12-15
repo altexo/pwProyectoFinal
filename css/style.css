@@ -1,84 +1,51 @@
-
-body
-{
-	background: #F3E2A9;
-	font: 16px;
-	margin: 0 auto;
-	max-width: 1024px;
+body {
+	font: 16px Verdana;
+	color: #FFF;
+  	background: #CCC;
+  	margin: 0px auto;
+  	max-width: 1024px;
 }
 
-#boxcard
-{
+
+#picbox {
+	margin: 0px auto;
+	width: 640px;
+}
+#boxcard {
 	z-index: 1;
 	margin: 10px 0 0;
 }
-
-#boxcard div
-{
-	border: 3px solid #4000FF;
-	border-radius: 5px;
-	box-shadow: 0 1px 5px rgba(0,0,0,.5);
-	background: white;
-	cursor: pointer;
+#boxcard div{
 	float: left;
 	width: 60px;
 	height: 60px;
-	margin: 2px;
-	padding: 2px;
+	margin: 3px;
+	padding: 3px;
+	border: 3px solid #045FB4;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 0 1px 5px rgba(0,0,0,.5);
+  	background: white;
 	z-index: 2;
 }
-
 #boxcard div img {
 	display: none;
 	border-radius: 10px;
 	z-index: 3;
 }
-
-#botones
-{
-	display: block;
-	margin: 20px;
+#boxbuttons {
 	text-align: center;
+	margin: 20px;
+	display: block;
 }
-
-#inicio{
-	margin: 0px auto;
-	width: 300px;
-}
-
-#jugadores div
-{
-	/*margin:0 auto;
-	width: 300px;
-	display: none;*/
-}
-
-
-#picbox
-{
-	margin: 0px auto;
-	width: 640px;
-	/*display: none;*/
-}
-
-.boton
-{
+#boxbuttons .button {
 	text-transform: uppercase;
-	background: #0062FF;
+	background: #EE872A;
 	padding: 5px 10px;
 	margin: 5px;
-	border-radius: 5px;
+	border-radius: 10px;
 	cursor: pointer;
 }
-
-.boton:hover
-{
-	background: #002B6F;
-}
-
-.tituloJugador
-{
-	font-size: 2em;
-	color:#0062FF;
-	font-family: Arial;
+#boxbuttons .button:hover {
+	background: #999;
 }
