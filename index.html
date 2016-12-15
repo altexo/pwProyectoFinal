@@ -7,38 +7,55 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   
   <script src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/juego.js"></script>
+  <script type="text/javascript" src="js/eventos.js"></script>
 </head>
 <body>
 <div clas="container">
   <div id="inicio">
     <div id="jugadores">
       <div>
-        <h2>Jugador 1</h2>
-        <input type="text" id="txtUsuario1" placeholder="Usuario" class="form-control">
+        <span class="tituloJugador">Jugador 1</span>
+        <input type="text" id="txtUsuario1" placeholder="Usuario" class="form-control"> <br>
         <input type="password" id="txtContraseña1" placeholder="Contraseña" class="form-control">
       </div>
+      <br>
       <div>
-        <h2>Jugador 2</h2>
-        <input type="text" id="txtUsuario2" placeholder="Usuario" class="form-control">
+        <span class="tituloJugador">Jugador 2</span>        
+        <input type="text" id="txtUsuario2" placeholder="Usuario" class="form-control"> <br>
         <input type="password" id="txtContraseña2" placeholder="Contraseña" class="form-control">
       </div>
+      <br>
+      <button class="boton" id="btnComenzar">Comenzar</button>
+      <button class="boton" id="btnRegistrarse">Registrarse</button>
     </div>
   </div>
 
-    <div id="picbox">
+  <div id="juego">
+    <div id=datosJugador1>
+      
+    </div>
+
+    <div id="memorama">
       <span id="botones">
         <span>
           <span id="contador">0</span>
           Clicks
         </span>
-        <button class="boton" id="btnReinicia" onclick="reiniciarJuego();">
+        <button class="boton" id="btnReinicia" >
           Reiniciar
         </button>
       </span>
-      <div id="boxcard"></div>
+      <div id="cartas"></div>
+    </div>
+
+    <div id=datosJugador2>
+      
     </div>
   </div>
+
+
+  </div>
+    
 </body>
 </html>
 

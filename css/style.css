@@ -2,9 +2,9 @@
 body
 {
 	background: #F3E2A9;
-	color: #FFF;
-	font: 18px Verdana;
+	font: 16px;
 	margin: 0 auto;
+	max-width: 1024px;
 }
 
 #boxcard
@@ -41,7 +41,26 @@ body
 	text-align: center;
 }
 
-#botones .boton
+#inicio{
+	margin: 0px auto;
+	width: 300px;
+}
+
+#jugadores div
+{
+	/*margin:0 auto;
+	width: 300px;*/
+}
+
+
+#picbox
+{
+	margin: 0px auto;
+	width: 640px;
+	display: none;
+}
+
+.boton
 {
 	text-transform: uppercase;
 	background: #0062FF;
@@ -51,24 +70,14 @@ body
 	cursor: pointer;
 }
 
-#botones .boton:hover
+.boton:hover
 {
 	background: #002B6F;
 }
 
-#inicio{
-	margin: 0px auto;
-}
-
-#inicio div
+.tituloJugador
 {
-	/*display: inline-block;*/
-	margin: 0px auto;
-}
-
-#picbox
-{
-	margin: 0px auto;
-	width: 640px;
-	display: none;
+	font-size: 2em;
+	color:#0062FF;
+	font-family: Arial;
 }
