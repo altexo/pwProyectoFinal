@@ -38,14 +38,16 @@
 		$conexion  = mysql_connect("localhost","root","");
 		//Conexión a la base de datos
 		mysql_select_db("bd2163");
-		$consulta  = sprintf("select usuario,clave from jugadores where (usuario=%s and clave=%s) OR (usuario=%s and clave=%s) limit 1",$u1,$c1,$u2,$u2);
+		$consulta  = sprintf("select usuario, clave from jugadores where (usuario=%s and clave=%s) OR (usuario=%s and clave=%s)",$u1,$c1,$u2,$c2);
 		$resultado = mysql_query($consulta);
 		//Esperamos un solo resultado
 		if(mysql_num_rows($resultado) == 2	)
 		{
+			$usr1 = $_POST["usuario1"];
+			$usr2 = $_POST["usuario2"];
 			$respuesta = true;
 		}
-		$arregloJSON = array('respuesta' => $respuesta );
+		$arregloJSON = array('respuesta' => $respuesta, 'usuario1' => $usr1,'usuario2' => $usr2 );
 		print json_encode($arregloJSON);
 	}
 
@@ -53,13 +55,13 @@
 	{
 		$respuesta = false;
 		$usuario= GetSQLValueString($_POST["usuario"],"text"); //limpieza
-		$nombre= GetSQLValueString($_POST["nombre"],"text"); //limpieza
+		$clave= GetSQLValueString($_POST["clave"],"text"); //limpieza
 		$edad= GetSQLValueString($_POST["edad"],"text"); //limpieza
 		//Conexión al servidor
 		$conexion  = mysql_connect("localhost","root","");
 		//Conexión a la base de datos
 		mysql_select_db("bd2163");
-		$consulta  = sprintf("insert into jugadores values(%s, %s, %s)",$usuario,$nombre,$edad);
+		$consulta  = sprintf("insert into jugadores values(%s, %s, %s)",$usuario,$clave,$edad);
 		$resultado = mysql_query($consulta);
 		if($resultado)
 		{
@@ -77,7 +79,7 @@
 			break;
 		
 		case 'guardar':
-			validaUsuario();
+			guardaUsuario();
 			break;
 
 		default:

@@ -1,14 +1,35 @@
 body {
-	font: 16px Verdana;
+	font: 18px Arial;
 	color: #FFF;
-  	background: #CCC;
+	font-weight: bold;
+  	background: #F7BE81;
   	margin: 0px auto;
   	max-width: 1024px;
+}
+
+#inicio, #registro
+{
+	margin: 0px auto;
+	width: 640px;
+	text-align: center;
+}
+
+#registro
+{
+	display: none;
+}
+
+#main
+{
+	margin: 0px auto;
+	width: 640px;
+	display: none;
 }
 
 
 #picbox {
 	margin: 0px auto;
+	text-align: center;
 	width: 640px;
 }
 #boxcard {
@@ -32,20 +53,4 @@ body {
 	display: none;
 	border-radius: 10px;
 	z-index: 3;
-}
-#boxbuttons {
-	text-align: center;
-	margin: 20px;
-	display: block;
-}
-#boxbuttons .button {
-	text-transform: uppercase;
-	background: #EE872A;
-	padding: 5px 10px;
-	margin: 5px;
-	border-radius: 10px;
-	cursor: pointer;
-}
-#boxbuttons .button:hover {
-	background: #999;
 }

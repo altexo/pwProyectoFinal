@@ -10,39 +10,45 @@
   <script type="text/javascript" src="js/eventos.js"></script>
 </head>
 <body>
-<div clas="container">
   <div id="inicio">
     <div id="jugadores">
       <div>
-        <span class="tituloJugador">Jugador 1</span>
-        <input type="text" id="txtUsuario1" placeholder="Usuario" class="form-control"> <br>
-        <input type="password" id="txtContraseña1" placeholder="Contraseña" class="form-control">
+        <span class="tituloJugador">Jugador 1</span> <br>
+        <input type="text" id="txtUsuario1" placeholder="Usuario"> <br>
+        <input type="password" id="txtClave1" placeholder="Contraseña">
       </div>
       <br>
       <div>
-        <span class="tituloJugador">Jugador 2</span>        
-        <input type="text" id="txtUsuario2" placeholder="Usuario" class="form-control"> <br>
-        <input type="password" id="txtContraseña2" placeholder="Contraseña" class="form-control">
+        <span class="tituloJugador">Jugador 2</span> <br>
+        <input type="text" id="txtUsuario2" placeholder="Usuario"> <br>
+        <input type="password" id="txtClave2" placeholder="Contraseña">
       </div>
       <br>
-      <button class="boton" id="btnComenzar">Comenzar</button>
-      <button class="boton" id="btnRegistrarse">Registrarse</button>
+      <button class="boton" id="btnComenzar" onclick="validaUsuario();">Comenzar</button>
+      <button class="boton" id="btnRegistrarse" onclick="registro();">Registrarse</button>
     </div>
   </div>
 
-    <div id="picbox">
-      <span id="boxbuttons">
-        <span>
-          <span id="counter">0</span>
-          Clicks
-        </span>
-        
-        <span class="button">
-          <a onclick="ResetGame();">Reset</a>
-        </span> 
-      </span>
+  <div id="registro">
+    <h2>Registro</h2>
+    <input type="text" id="txtUsuario" placeholder="Usuario"> <br>
+    <input type="password" id="txtClave" placeholder="Contraseña"> <br>
+    <input type="text" id="txtEdad" placeholder="Edad"> <br>
+    <button class="boton" id="btnGuardar" onclick="guardaUsuario();">Guardar</button>
+    <button class="boton" id="btnInicio" onclick="inicio();">Jugar</button>
+  </div>
+
+  <div id=main>
+    <div id="puntos">
+      Jugador 1: <div class="results1">J1</div>
+      Jugador 2: <div class="results2">J2</div>
+    </div>
+    <div id="picbox">       
+      <button id="reiniciar" onclick="ResetGame();"">Reiniciar</button>
       <div id="boxcard"></div>
     </div>
+  </div>
+  
 </body>
 </html>
 
